@@ -1,0 +1,250 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+*{
+    list-style: none;
+    text-decoration: none;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #ddd;
+}
+canvas{
+    background: url(../images/timg.jpg) repeat;
+}
+/*暂停*/
+.stop{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 20px;
+    top: 88%;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+.stop img{
+    width: 100%;
+    height: 100%;
+}
+/*弹框*/
+.tank1{
+    width: 241px;
+    height: 232px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+.tank1 ul{
+    width: 100%;
+    height:100%;
+}
+.tank1 ul li:nth-of-type(1){
+    width: 170px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top:32px;
+}
+.tank1 ul li:nth-of-type(2){
+    width: 170px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top:88px;
+}
+.tank1 ul li:nth-of-type(3){
+    width: 170px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top:150px;
+}
+.tank1 .cha{
+    width: 40px;
+    height:40px;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+/*游戏结束后的弹框*/
+.tank2{
+    width: 274px;
+    height: 196px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+.tank2 img{
+    width: 100%;
+    height: 100%;
+}
+.tank2 span{
+    display: block;
+    width: 70px;
+    height: 35px;
+    font-size: 20px;
+    color: #6D0A09;
+    cursor: pointer;
+    border: 1px solid #6D0A09;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 35px;
+}
+.tank2 span:hover{
+    color: #D84C29;
+    border: 1px solid #D84C29;
+}
+.tank2 span:nth-of-type(1){
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
+.tank2 span:nth-of-type(2){
+    position: absolute;
+    right:10px;
+    bottom: 25px;
+}
+/*mask*/
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 999;
+}
+.mask .door1{
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top:0;
+  }
+.mask .door1 img{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.mask .door2{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top:0;
+}
+.mask .door2 img{
+    width: 100%;
+    height: 100%;
+}
+.mask .start{
+    width: 543px;
+    height: 125px;
+    position: absolute;
+    left: 30%;
+    top:60%;
+    cursor: pointer;
+    transition: all 2s ease ;
+    -webkit-animation: start 2s ease forwards;
+}
+.mask .start img{
+    width: 100%;
+    height: 100%;
+}
+@-webkit-keyframes start {
+    0%{
+        transform: scale(3,3);
+        opacity:0;
+    }
+    70%{
+        transform: scale(0,0);
+        opacity:1;
+    }
+    100%{
+        transform: scale(1,1);
+        opacity:1;
+    }
+}
+
+/*menu*/
+.menu{
+    width: 250px;
+    height: 220px;
+    position: absolute;
+    right: 0;
+    top:0;
+    /*bottom: 0;*/
+}
+.menu ul{
+     width: 250px;
+     height: 220px;
+ }
+.menu ul li{
+    width: 100%;
+    height: 25%;
+    margin-bottom: 8px;
+    position: relative;
+}
+.menu ul li .lifes{
+    width: 37px;
+    height:44px;
+    position: absolute;
+    left: 60px;
+    line-height: 100%;
+}
+.menu ul li span{
+    display: block;
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    right: 85px;
+    top:10px;
+    font-size:20px;
+    color: #ddd;
+    z-index: 999;
+}
+
+.menu ul li .jinbi{
+    width: 37px;
+    height:44px;
+    position: absolute;
+    left: 60px;
+    line-height: 100%;
+}
+.menu ul li .gk{
+    width: 30px;
+    height: 39px;
+    position: absolute;
+    left: 60px;
+    line-height: 100%;
+}
+.menu ul li .sc{
+    width: 28px;
+    height: 40px;
+    position: absolute;
+    left: 60px;
+    line-height: 100%;
+}
